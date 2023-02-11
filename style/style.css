@@ -1,53 +1,9 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    font-family: 'Rubik';
+    font-weight: 100;
 }
 
-
+/* header */
 header {
     background-color: #1f2937;
     color: white;
@@ -60,10 +16,12 @@ header a {
     font-style: normal;
     text-decoration: none;
 }
+
+/* general flexcontainer */
 .container{
     height: inherit;
     display: flex;
-    gap: 12px;
+    gap: 20px;
     align-items: center;
     flex: 1 0 0;
     margin-inline: 50px;
@@ -75,7 +33,7 @@ header a {
     margin-right: auto;
 }
 
-
+/* main and hero */
 main .container > div {
     /* background-color: aquamarine; */
 }
@@ -109,27 +67,13 @@ main .container figure{
 
 .hero2{
     flex: 1;
-}
-
-.container2 {
     display: flex;
-    flex-direction: column;
-    height: 300px;
     align-items: center;
+    justify-content: center;
+    /* text-align: center; */
 }
 
-
-.figur {
-    display: flex;
-}
-
-.some{
-    margin: 40px;
-    font-size: 36px;
-    font-weight: bold;
-    color: #1f2937;
-}
-
+/* button style to all doc */
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -142,32 +86,115 @@ main .container figure{
     margin-top: 10px;
 }
 
+.button:hover {
+    background-color: #449947;
+}
+
+.button:active{
+    background-color: #1f2937;
+}
+
+/* article */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+}
+
+/* 'some more information' */
+.some{
+    margin: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* blue blocks to put an img */
 .image-holder {
-    width: 150px;
-    height: 150px;
-    border: 4px solid rgb(51, 124, 124);
-    border-radius: 5%;
+    width: 180px;
+    height: 180px;
+    border: 6px solid rgb(51, 124, 124);
+    border-radius: 10%;
 }
 
 .image-holder p {
     align-self: flex-end;
     text-align: center;
+    margin-top: 10px;
 }
 
+.image-holder img{
+    width: 180px;
+    height: 180px;
+    border-radius: 10%;
+}
+
+/* quote */
 blockquote {
     margin-top: 100px;
     box-sizing: border-box;
     background-color: #e5e7eb;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* align-items: center; */
+    flex-direction: column;
 
-    height: 400px;
+    padding-inline: 250px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    min-height: 400px;
     width: 100%;
     font-size: 36px;
     font-style: italic;
     color: #1f2937;
+}
+
+/* quote author*/
+.author {
+    text-align: right;
+}
+
+/* call to action part */
+article[class='container']{
+    /* width: 100%;  */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.call-to {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    background-color: #3882f6;
+    color: #fff;
+    min-width: 80vw;
+    min-height: 15vh;
+    border: 19px solid #3882f6;
+    border-radius: 20px;
+}
+
+.call-to h2 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.call-to p {
+    font-size: 18px;
+}
+
+/* footer */
+footer {
+    background-color: #1f2937;
+    color: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
